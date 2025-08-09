@@ -122,27 +122,6 @@ The application will be available at:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 
-## 🔧 API Endpoints
-
-### Authentication
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-- `GET /api/auth/profile` - Get user profile
-- `PUT /api/auth/profile` - Update user profile
-
-### Tickets
-- `GET /api/tickets` - Get tickets (filtered by user role)
-- `POST /api/tickets` - Create new ticket
-- `GET /api/tickets/:id` - Get single ticket
-- `PUT /api/tickets/:id` - Update ticket (moderators/admins)
-- `POST /api/tickets/:id/comments` - Add comment to ticket
-
-### Moderator
-- `GET /api/moderator/stats` - Get moderator dashboard stats
-- `GET /api/moderator/tickets` - Get assigned tickets
-- `GET /api/moderator/unassigned` - Get unassigned tickets
-- `PUT /api/moderator/bulk-assign` - Bulk assign tickets
-
 ## 🤖 AI Processing Flow
 
 1. **Ticket Submission**: User submits a support request
@@ -276,12 +255,6 @@ npm test
 
 ## 🔄 Background Jobs (Inngest)
 
-### Available Functions
-- **processTicket**: AI analysis and assignment
-- **sendNotification**: Email notification delivery
-- **cleanupFiles**: Periodic file cleanup
-- **generateReports**: Automated reporting
-
 ### Job Monitoring
 Access Inngest dashboard at `/api/inngest` for job monitoring and debugging.
 
@@ -316,77 +289,3 @@ Access Inngest dashboard at `/api/inngest` for job monitoring and debugging.
 - User-friendly error messages
 - Retry mechanisms
 - Loading states
-
-## 📝 API Documentation
-
-### Authentication Required
-All endpoints except `/api/auth/login`, `/api/auth/register`, and health checks require authentication via Bearer token.
-
-### Request Headers
-```javascript
-{
-  "Authorization": "Bearer your-jwt-token",
-  "Content-Type": "application/json"
-}
-```
-
-### Response Format
-```javascript
-// Success Response
-{
-  "success": true,
-  "data": { ... },
-  "message": "Operation completed successfully"
-}
-
-// Error Response
-{
-  "success": false,
-  "message": "Error description",
-  "error": "Technical error details"
-}
-```
-
-## 🔧 Development Tips
-
-### Adding New Features
-1. Create database models in `/models`
-2. Add API routes in `/routes`
-3. Create React components in `/src/components`
-4. Update navigation in `Navbar.js`
-5. Add proper error handling and validation
-
-### Code Style
-- Use ESLint and Prettier for consistency
-- Follow RESTful API conventions
-- Use meaningful variable names
-- Add JSDoc comments for functions
-- Keep components focused and reusable
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## 🆘 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Email: support@aisupport.com
-- Documentation: [docs.aisupport.com](https://docs.aisupport.com)
-
-## 🙏 Acknowledgments
-
-- Google Gemini AI for intelligent processing
-- Inngest for reliable background jobs
-- Tailwind CSS for beautiful styling
-- React community for excellent ecosystem
-- MongoDB for flexible data storage
-- 
