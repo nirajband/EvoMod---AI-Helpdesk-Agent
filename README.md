@@ -224,35 +224,6 @@ EMAIL_HOST=your-production-smtp-host
 # ... other production configs
 ```
 
-## 🧪 Testing
-
-### Backend Testing
-```bash
-cd ai-ticket-assistant
-npm test
-```
-
-### Frontend Testing
-```bash
-cd ai-ticket-frontend
-npm test
-```
-
-## 📊 Monitoring & Analytics
-
-### Built-in Metrics
-- Response times
-- Resolution rates
-- User satisfaction scores
-- System performance metrics
-- AI processing accuracy
-
-### Health Checks
-- Database connectivity
-- AI service status
-- Email service status
-- File storage accessibility
-
 ## 🔄 Background Jobs (Inngest)
 
 ### Job Monitoring
