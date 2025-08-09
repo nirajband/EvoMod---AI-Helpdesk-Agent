@@ -1,4 +1,4 @@
-# AI-Powered Ticket Management System
+# EvoMod - AI Helpdesk Agent
 
 A comprehensive support ticket management system powered by AI for intelligent categorization, priority assignment, and expert matching.
 
